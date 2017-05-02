@@ -1,0 +1,171 @@
+﻿@model BusinessObject.UserProfile
+@{
+    ViewBag.Title = "Login";
+}
+<link href="~/Content/JCarousel.css" rel="stylesheet" />
+@*<script src="~/Scripts/jquery.js"></script>*@
+<script src="~/Scripts/jquery.jcarousel.js"></script>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><strong class="appLogo">TweetEvents</strong></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#" id="homelink" style="color:black; font-size:18px;">Home</a></li>
+                <li><a href="#" id="aboutlink" style="color:black; font-size:18px;">About Us</a></li>
+                <li><a href="#" id="contactlink" style="color:black; font-size:18px;">Contact Us</a></li>
+                <li><a href="~/Account/Register" id="register" style="color:black; font-size:18px;">Register</a></li>
+            </ul>
+            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+            {
+                @Html.AntiForgeryToken()
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="padding-right:5px;padding-top:7px;">
+                        @Html.ValidationSummary(true)
+                    </li>
+                    <li class="active" style="padding-right:5px;padding-top:7px;">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", style = "margin-right:10px;", placeholder = "Username" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </li>
+                    <li style="padding-right:5px;padding-top:7px;">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", style = "margin-right:10px;", placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </li>
+                    <li><input type="submit" value="Log in" style="padding-top:7px; margin-top:5px;" class="btn btn-success" /></li>
+                </ul>
+            }
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+<div class="content-wrapper" id="home" style="height:1000px !important;padding-top:75px;">
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="~/Images/Event1 (1).jpg" width="1400" height="700" alt=""></li>
+                <li><img src="~/Images/Event1 (2).jpg" width="1400" height="700" alt=""></li>
+                <li><img src="~/Images/Event1 (3).jpg" width="1400" height="700" alt=""></li>
+                <li><img src="~/Images/Event1 (4).jpg" width="1400" height="700" alt=""></li>
+                <li><img src="~/Images/Slide-11.jpg" width="1400" height="700" alt=""></li>
+            </ul>
+        </div>
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination">
+            <!-- Pagination items will be generated in here -->
+        </p>
+    </div>
+</div>
+<div id="about" class="content-wrapper" style="color:white;height:1000px !important; width:1200px;">
+    <h1 style="font-weight:bold; padding-top:75px;"><u>About Us</u></h1>
+    <div style="font-size:x-large;">
+        <p>In May 2005, our dreams came to fruition when Creative Occasions opened its doors as the premier event planning company in Cedar Rapids, Iowa.  Backed by over 30 years of experience, our event planning experience and management specializes in corporate events and social celebrations. We offer excellent organizational skills, tremendous detail, and positive, energetic results with unbelievable customer service.</p>
+
+        <div><h3><u>Dedicated to your event</u></h3></div><p>
+            From business tradeshows, office celebrations and employee appreciation days, Creative Occasions can direct your event from start to finish, doing as much or as little as you like.
+        </p> <div>
+            <h3>
+                <u>
+                    Planning for every occasion
+                </u>
+            </h3>
+        </div><p>
+            Let Creative Occasions show you exactly how you can have it all!  We understand that most corporate and social events work within a budget, and for us, that’s no problem.
+        </p>
+        <p>
+            With expertise in Event & Meeting Management, Event Registration, Travel Services, Onsite Event Management, Destination Services, Production Services, and Creative & Event Branding, we can help bring it together for you.
+        </p>
+        <p>
+            Creative Occasions is committed to exceeding your expectations in making your event a successful one.
+        </p>
+        <div>
+            <h3>
+                <u>
+                    Some events our clients have enjoyed
+                </u>
+            </h3>
+        </div>
+        <p>
+            • Conferences and Conventions
+            • Trade Shows
+            • Educational Seminars
+            • Holiday Parties
+            • Anniversaries
+            • Reunions
+            • Runway Shows
+            • Weddings
+            • Birthdays
+            • Retirement Parties
+        </p>
+    </div>
+</div>
+<div id="contact" class="content-wrapper" style="color:white;height:1000px !important;">
+    <h1 style="font-weight:bold; padding-top:75px;"><u>Contact Us</u></h1>
+    <div>
+        <div style="display:block;zoom:1">
+            <div id="content1" style="font-size:x-large;"><div style="display:block;"><div style="display:block;">Thank you for visiting our website.&nbsp; If you would like to contact us about catering one of your events, you can call us at <strong>(319) 651-5000</strong>.</div></div></div><div id="content2" style="font-size:large;">
+                <div style="display:block;">
+                    <div style="display:block;">
+                        TweetEvents<br>
+                        400 5th Street South East<br>
+                        Cedar Rapids, IA&nbsp; 52401<br>
+                        319-651-5000<br>
+                        800-211-6756<br>
+                        <a style="color:#FFFF00;" href="mailto:pdubey@yahoo.com" target="_blank">
+                            pdubey@yahoo.com<br>
+                        </a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#btnRegister").click(function () {
+            window.location.href = "/Account/Register";
+        });
+
+        $('.jcarousel').jcarousel({
+            animation: {
+                duration: 800,
+                easing: 'easeOutBounce',
+                complete: function () {
+                }
+            },
+            transitions: Modernizr.csstransitions ? {
+                transforms:   Modernizr.csstransforms,
+                transforms3d: Modernizr.csstransforms3d,
+                easing:       'ease'
+            } : false,
+            wrap: 'circular'
+        }).jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        });
+
+        $('.jcarousel-control-prev').click(function () {
+            $('.jcarousel').jcarousel('scroll', '-=1');
+        });
+
+        $('.jcarousel-control-next').click(function () {
+            $('.jcarousel').jcarousel('scroll', '+=1');
+        });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function () {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function () {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination({
+                'item': function (page, carouselItems) {
+                    return '<a href="#' + page + '">' + (page - 1) + '</a>';
+                }
+            });
+    });
+</script>

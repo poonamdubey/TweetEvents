@@ -1,0 +1,14 @@
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\bin\Debug\BusinessObject.dll
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\bin\Debug\BusinessObject.pdb
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\bin\Debug\BusinessObject.dll
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\bin\Debug\BusinessObject.pdb
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\DataAccess\obj\Debug\DataAccess.pdb

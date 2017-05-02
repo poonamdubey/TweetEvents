@@ -1,0 +1,120 @@
+﻿@model EventManagementWebApp.Models.EventBookingViewModel
+
+@{
+    Layout = "../Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Create Event Bookings";
+}
+<div style="margin-top:100px;">
+    <h2>Create Event</h2>
+    <div style="border:2px solid black; border-radius:4px;padding:10px;">
+        @using (Html.BeginForm())
+    {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>EventBookingsO</legend>
+
+                <div class="row top-buffer">
+                    <div class="col-md-4">
+                        <div class="editor-label">
+                            @Html.Label("Event Date")
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.EventDate, new { @class = "form-control datepicker", placeholder = "Enter Event Date..." })
+                            @Html.ValidationMessageFor(model => model.EventDate)
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="editor-label">
+                            @Html.Label("Start Time")
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.StartTime, new { @class = "form-control timepicker", placeholder = "Enter Event From Time..." })
+                            @Html.ValidationMessageFor(model => model.StartTime)
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="editor-label">
+                            @Html.Label("End Time")
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.EndTime, new { @class = "form-control timepicker", placeholder = "Enter Event To Time..." })
+                            @Html.ValidationMessageFor(model => model.EndTime)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row  top-buffer">
+                    <div class="col-md-4">
+                        <div class="editor-label">
+                            @Html.Label("Event Name")
+                        </div>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(m => m.EventID, new SelectList(Model.EventType, "EventTypeID", "EventTypeName"), new { style = "width:200px;" })
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="editor-label">
+                            @Html.Label("Caterers")
+                        </div>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => model.CatererID, new SelectList(Model.Caterer, "CatererID", "CatererName"), new { style = "width:200px;" })
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="editor-label">
+                            @Html.Label("Customers")
+                        </div>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(model => model.CustomerID, new SelectList(Model.Customer, "CustomerID", "FirstName"), new { style = "width:200px;" })
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row  top-buffer">
+                    <div class="col-md-4">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.Venue)
+                        </div>
+                        <div class="editor-field">
+                            @Html.DropDownListFor(m => m.VenueID, new SelectList(Model.Venue, "VenueID", "BuildingName"))
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row  top-buffer">
+                    <div class="col-md-6" style="margin-top:10px;">
+
+                    </div>
+                    <div class="col-md-6" style="margin-top:10px;">
+                        <input type="submit" class="btn btn-success" value="Create Event" />
+                        <input class="btn btn-primary" onclick="location.href='@Url.Action("Index")';return false;" value="Back to list" />
+                    </div>
+                </div>
+            </fieldset>
+    }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".datepicker").val('');
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date()
+        });
+
+        $('.timepicker').timepicker({ 'timeFormat': 'H:i:s' });
+    });
+
+
+
+</script>

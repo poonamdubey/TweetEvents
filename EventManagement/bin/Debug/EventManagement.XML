@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventManagement</name>
+    </assembly>
+    <members>
+        <member name="T:EventManagement.CustomerWindow">
+            <summary>
+            Interaction logic for CustomerWindow.xaml
+            </summary>
+            <summary>
+            CustomerWindow
+            </summary>
+        </member>
+        <member name="F:EventManagement.CustomerWindow.myCustomerManager">
+            <summary>
+            My customer manager
+            </summary>
+        </member>
+        <member name="F:EventManagement.CustomerWindow.isEdit">
+            <summary>
+            The is edit
+            </summary>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.CustomerWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.grdCustomerList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Handles the SelectionChanged event of the grdCustomerList control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.btnGetCustomerData_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnGetCustomerData control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.btnClose_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnClose control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.btnDeleteCustomer_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnDeleteCustomer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.DisplayCustomerData">
+            <summary>
+            Displays the customer data.
+            </summary>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.CleanEntryForm">
+            <summary>
+            Cleans the entry form.
+            </summary>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.FillEntryForm(BusinessObject.Customer)">
+            <summary>
+            Fills the entry form.
+            </summary>
+            <param name="cust">The customer.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.EnableDisableForm(System.Boolean)">
+            <summary>
+            Enables the disable form.
+            </summary>
+            <param name="isEnable">if set to <c>true</c> [is enable].</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnSave control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.btnCancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnCancel control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.btnEditCustomer_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnEditCustomer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.CustomerWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.EventBooking">
+            <summary>
+            Interaction logic for EventBooking.xaml
+            </summary>
+            <summary>
+            EventBooking
+            </summary>
+        </member>
+        <member name="F:EventManagement.EventBooking._accessToken">
+            <summary>
+            The _access token
+            </summary>
+        </member>
+        <member name="F:EventManagement.EventBooking.eventBookingManager">
+            <summary>
+            The event booking manager
+            </summary>
+        </member>
+        <member name="F:EventManagement.EventBooking.customerManager">
+            <summary>
+            The customer manager
+            </summary>
+        </member>
+        <member name="F:EventManagement.EventBooking.isEdit">
+            <summary>
+            The is edit
+            </summary>
+        </member>
+        <member name="M:EventManagement.EventBooking.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.EventBooking"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.EventBooking.grdEventBookingList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Handles the SelectionChanged event of the grdEventBookingList control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.DisplayEventBookingsData">
+            <summary>
+            Displays the event bookings data.
+            </summary>
+        </member>
+        <member name="M:EventManagement.EventBooking.CleanEntryForm">
+            <summary>
+            Cleans the entry form.
+            </summary>
+        </member>
+        <member name="M:EventManagement.EventBooking.FillEntryForm(BusinessObject.EventBookingsO)">
+            <summary>
+            Fills the entry form.
+            </summary>
+            <param name="eventBook">The event book.</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.btnCancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnCancel control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.btnClose_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnClose control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.EnableDisableForm(System.Boolean)">
+            <summary>
+            Enables the disable form.
+            </summary>
+            <param name="isEnable">if set to <c>true</c> [is enable].</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.btnEdit_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnEdit control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.btnSave_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnSave control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.EventBooking.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.SplashWindow">
+            <summary>
+            Interaction logic for SplashWindow.xaml
+            </summary>
+            <summary>
+            SplashWindow
+            </summary>
+        </member>
+        <member name="M:EventManagement.SplashWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.SplashWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.SplashWindow.Storyboard_Completed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Completed event of the Storyboard control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.SplashWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.UserProfileWindow">
+            <summary>
+            Interaction logic for UserProfileWindow.xaml
+            </summary>
+            <seealso cref="T:System.Windows.Window"/>
+            <summary>
+            UserProfileWindow
+            </summary>
+        </member>
+        <member name="F:EventManagement.UserProfileWindow.userProfileManagerObj">
+            <summary>
+            The user profile manager object
+            </summary>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.UserProfileWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.DisplayUserData">
+            <summary>
+            Method to display User data into grid
+            </summary>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.EnableDisableForm(System.Boolean)">
+            <summary>
+            Method to enable disable form entry fields
+            </summary>
+            <param name="isEnable">bool</param>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.FillEntryForm(BusinessObject.UserProfile)">
+            <summary>
+            Method to fill entry form fields
+            </summary>
+            <param name="profile">UserProfile class object</param>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.btnClose_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Close button - click event
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.btnCancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnCancel control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.grdUserList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            User List Grid - Grid item selection change event
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.CleanEntryForm">
+            <summary>
+            Cleans the entry form.
+            </summary>
+        </member>
+        <member name="M:EventManagement.UserProfileWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:EventManagement.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:EventManagement.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:EventManagement.LoginWindow">
+            <summary>
+            Interaction logic for Login.xaml
+            </summary>
+            <summary>
+            LoginWindow
+            </summary>
+        </member>
+        <member name="F:EventManagement.LoginWindow._accessToken">
+            <summary>
+            The _access token
+            </summary>
+        </member>
+        <member name="M:EventManagement.LoginWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.LoginWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.LoginWindow.CloseCommand_Executed(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)">
+            <summary>
+            Handles the Executed event of the CloseCommand control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.ExecutedRoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.LoginWindow.Window_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Handles the MouseDown event of the Window control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.LoginWindow.btnLogin_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnLogin control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+            <exception cref="T:System.ApplicationException">Please enter valid username and password !</exception>
+        </member>
+        <member name="M:EventManagement.LoginWindow.btnCancel_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnCancel control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.LoginWindow.RaiseAccessTokenCreatedEvent">
+            <summary>
+            Raises the access token created event.
+            </summary>
+        </member>
+        <member name="M:EventManagement.LoginWindow.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Handles the Closing event of the Window control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.LoginWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Loaded event of the Window control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.LoginWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.LoginWindow.AccessTokenCreatedEventHandler">
+            <summary>
+            Delegate AccessTokenCreatedEventHandler
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="a">a.</param>
+        </member>
+        <member name="T:EventManagement.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:EventManagement.MainWindow._accessToken">
+            <summary>
+            The _access token
+            </summary>
+        </member>
+        <member name="F:EventManagement.MainWindow._login">
+            <summary>
+            The _login
+            </summary>
+        </member>
+        <member name="M:EventManagement.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EventManagement.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:EventManagement.MainWindow.btnLogin_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnLogin control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.setAccessToken(System.Object,BusinessObject.AccessToken)">
+            <summary>
+            Sets the access token.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="at">At.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.UserAuthorization">
+            <summary>
+            Users the authorization.
+            </summary>
+        </member>
+        <member name="M:EventManagement.MainWindow.ShowHideTabs(System.String)">
+            <summary>
+            Shows the hide tabs.
+            </summary>
+            <param name="roleName">Name of the role.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.DisplayCustomerData">
+            <summary>
+            To bind customer data grid
+            </summary>
+        </member>
+        <member name="M:EventManagement.MainWindow.btnAddCustomer_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnAddCustomer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.grdCustomerList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Handles the SelectionChanged event of the grdCustomerList control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.DisplayEventBookingsData">
+            <summary>
+            To Bind Event Booking Grid
+            </summary>
+        </member>
+        <member name="M:EventManagement.MainWindow.DisplayUserData">
+            <summary>
+            To Bind Event Booking Grid
+            </summary>
+        </member>
+        <member name="M:EventManagement.MainWindow.btnAddEventBooking_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnAddEventBooking control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.btnUserProfile_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event of the btnUserProfile control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.grdEventBookingList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Handles the SelectionChanged event of the grdEventBookingList control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:EventManagement.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:EventManagement.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EventManagement.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

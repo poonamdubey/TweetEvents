@@ -1,0 +1,65 @@
+﻿@model EventManagementWebApp.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="~/Account/Login"><strong class="appLogo">TweetEvents</strong></a>
+        </div>
+    </div><!--/.container-fluid -->
+</nav>
+<h1>Please Register</h1>
+<div id="login" class="row" style="border:2px solid black; border-radius:4px;padding:10px;" >
+    <div class="col-md-12">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col-md-6 pull-left top-buffer">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "Firstname" })
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </div>
+                <div class="col-md-6 pull-left top-buffer">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Lastname" })
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </div>
+              
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 pull-left top-buffer">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Username" })
+                    @Html.ValidationMessageFor(m => m.UserName)
+                </div>
+                <div class="col-md-6 pull-right top-buffer">
+                    @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control", placeholder = "EmailAddress" })
+                    @Html.ValidationMessageFor(m => m.EmailAddress)
+                </div>
+                
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 pull-left top-buffer">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+                <div class="col-md-6 pull-right top-buffer">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password" })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6 pull-left">
+                    <button type="submit" class="btn btn-success top-buffer">
+                        Register
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

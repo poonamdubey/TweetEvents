@@ -1,0 +1,74 @@
+﻿@model EventManagementWebApp.Models.EventBookingViewModel
+
+@{
+    Layout = "../Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Event Booking Details";
+}
+
+<h2>Event Booking Details</h2>
+<div style="border:2px solid black; border-radius:4px;padding:10px;">
+    <fieldset>
+        <legend>EventBookingViewModel</legend>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayName("Event Name")
+                    @Html.DropDownListFor(model => model.EventID, new SelectList(Model.EventType, "EventTypeID", "EventTypeName"), new { style = "width:200px;" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayName("Venue")
+                    @Html.DropDownListFor(model => model.VenueID, new SelectList(Model.Venue, "VenueID", "BuildingName"), new { style = "width:200px;" })
+                </div>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <div class="display-label">
+                    @Html.DisplayName("Customer Name")
+                    @Html.DropDownListFor(model => model.CustomerID, new SelectList(Model.Customer, "CustomerID", "FirstName"), new { style = "width:200px;" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="display-label">
+                    @Html.DisplayName("Caterer Details")
+                    @Html.DropDownListFor(model => model.CatererID, new SelectList(Model.Caterer, "CatererID", "CatererName"), new { style = "width:200px;" })
+                </div>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <div class="display-label">
+                    @Html.DisplayName("Start Time")
+                    @Html.DisplayFor(model => model.StartTime, new { style = "width:200px;" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="display-label">
+                    @Html.DisplayName("End Time")
+                    @Html.DisplayFor(model => model.EndTime, new { style = "width:200px;" })
+                </div>
+
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <div class="display-label">
+                    @Html.DisplayName("Event Date")
+                    @Html.DisplayFor(model => model.EventDate, new { style = "width:200px;" })
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <div class="row top-buffer">
+        <div class="col-md-4" style="margin-top:10px;">
+
+        </div>
+        <div class="col-md-8" style="margin-top:10px;">
+            <input class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = Model.BookingID })';return false;" value="Edit Bookings" />
+            <input class="btn btn-primary" onclick="location.href='@Url.Action("Index")';return false;" value="Back to list" />
+        </div>
+
+    </div>
+</div>

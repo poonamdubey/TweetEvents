@@ -1,0 +1,109 @@
+﻿@model EventManagementWebApp.Models.EventBookingViewModel
+
+@{
+    Layout = "../Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "List of Event Bookings";
+}
+<div style="margin-top:100px;">
+    <h2>Edit Event Booking</h2>
+    <div style="border:2px solid black; border-radius:4px;padding:10px;">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend>EventBookingViewModel</legend>
+                @Html.HiddenFor(model => model.BookingID)
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("Event Name")
+                            @Html.DropDownListFor(model => model.EventID, new SelectList(Model.EventType, "EventTypeID", "EventTypeName"), new { style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.EventID)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("Venue")
+                            @Html.DropDownListFor(model => model.VenueID, new SelectList(Model.Venue, "VenueID", "BuildingName"), new { style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.VenueID)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row top-buffer">
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("Customer")
+                            @Html.DropDownListFor(model => model.CustomerID, new SelectList(Model.Customer, "CustomerID", "FirstName"), new { style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.CustomerID)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("Caterers")
+                            @Html.DropDownListFor(model => model.CatererID, new SelectList(Model.Caterer, "CatererID", "CatererName"), new { style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.CatererID)
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row top-buffer">
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("Start Time")
+                            @Html.TextBoxFor(model => model.StartTime, new { @class = "timepicker", style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.StartTime)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("End Time")
+                            @Html.TextBoxFor(model => model.EndTime, new { @class = "timepicker", style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.EndTime)
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row top-buffer">
+                    <div class="col-md-6">
+                        <div class="editor-field">
+                            @Html.Label("Event Date")
+                            @Html.TextBoxFor(model => model.EventDate, new { @class = "datepicker", style = "width:200px;" })
+                            @Html.ValidationMessageFor(model => model.EventDate)
+                        </div>
+                    </div>
+                </div>
+                <div class="row top-buffer" style="margin-top:10px;">
+                    <div class="col-md-6">
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-success" value="Save Booking" />
+                        <input class="btn btn-primary" onclick="location.href='@Url.Action("Index")';return false;" value="Back to Event List" />
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date()
+        });
+
+        $('.timepicker').timepicker({ 'timeFormat': 'H:i:s' });
+    });
+
+
+
+</script>
+

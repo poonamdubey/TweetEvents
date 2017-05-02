@@ -1,0 +1,104 @@
+﻿@model BusinessObject.Customer
+
+@{
+    Layout = "../Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Details of Customer";
+}
+
+<h2>Details of Customer : @Html.DisplayFor(model => model.FirstName)</h2>
+<div style="border:2px solid black; border-radius:4px;padding:10px;">
+    <fieldset>
+        <legend>Customer</legend>
+        <div class="row top-buffer">
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.FirstName)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.LastName)
+                </div>
+            </div>
+        </div>
+
+        <div class="row  top-buffer">
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.EmailID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.EmailID)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayName("Phone Number")
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.PhoneNo1)
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row  top-buffer">
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayName("Address")
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Address1)
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.PostalCode)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.PostalCode)
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row  top-buffer">
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.City)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.City)
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.State)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.State)
+                </div>
+            </div>
+        </div>
+        <div class="row  top-buffer">
+            <div class="col-md-4" style="margin-top:10px;">
+            </div>
+            <div class="col-md-8" style="margin-top:10px;">
+                <input class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = Model.CustomerID })';return false;" value="Edit Customer" />
+                <input class="btn btn-primary" onclick="location.href='@Url.Action("Index")';return false;" value="Back to list" />
+            </div>
+        </div>
+    </fieldset>
+
+</div>

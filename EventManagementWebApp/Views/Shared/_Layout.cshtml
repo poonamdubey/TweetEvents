@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TweetEvents</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <div id="body" style="overflow-y:auto;" class="img-rounded">
+
+        <section class="content-wrapper">
+            @RenderBody()
+        </section>
+    </div>
+    <script>
+        $(document).ready(function () {
+            function goToByScroll(id) {
+                $(".active").removeClass("active");
+                $("#" + id).parent("li").addClass("active");
+                // Remove "link" from the ID
+                id = id.replace("link", "");
+                // Scroll
+                $('html,body').animate({
+                    scrollTop: $("#" + id).offset().top
+                },
+                    'slow');
+            }
+
+            $("#navbar > ul > li > a").click(function (e) {
+                // Prevent a page reload when a link is pressed
+                if (this.id.indexOf("link") >= 0) {
+                    // Call the scroll function
+                    e.preventDefault();
+                    goToByScroll(this.id);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

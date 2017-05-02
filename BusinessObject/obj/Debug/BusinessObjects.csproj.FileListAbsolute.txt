@@ -1,0 +1,10 @@
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\BusinessObject\bin\Debug\BusinessObject.dll
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\BusinessObject\bin\Debug\BusinessObject.pdb
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\BusinessObject\obj\Debug\BusinessObject.dll
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\BusinessObject\obj\Debug\BusinessObject.pdb
+C:\Users\PDUBEY\Desktop\p\DotNetTwo\MVC5Samples\EventManagement\BusinessObject\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\BusinessObject\bin\Debug\BusinessObject.dll
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\BusinessObject\bin\Debug\BusinessObject.pdb
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\BusinessObject\obj\Debug\BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\BusinessObject\obj\Debug\BusinessObject.dll
+C:\Users\PDUBEY\Desktop\p\Dotnetthree\EventManagement_WebApp\BusinessObject\obj\Debug\BusinessObject.pdb

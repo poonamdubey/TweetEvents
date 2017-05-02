@@ -1,0 +1,143 @@
+﻿@model BusinessObject.UserProfile
+
+@{
+    Layout = "../Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Details of User";
+}
+
+<h2>Details of user : @Html.DisplayFor(model => model.FirstName) </h2>
+<div style="border:2px solid black; border-radius:4px;padding:10px;">
+    <fieldset>
+        <legend>UserProfile</legend>
+        <div class="row  top-buffer">
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.UserName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.UserName)
+                </div>
+            </div>
+        </div>
+
+        <div class="row  top-buffer">
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.FirstName)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.LastName)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.MiddleName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.MiddleName)
+                </div>
+            </div>
+        </div>
+
+        <div class="row  top-buffer">
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.EmailAddress)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.EmailAddress)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.IsActive)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.RoleName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.RoleName)
+                </div>
+            </div>
+        </div>
+
+        <div class="row  top-buffer">
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Address)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Address)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Phone)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Phone)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.City)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.City)
+                </div>
+            </div>
+        </div>
+
+        <div class="row  top-buffer">
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.State)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.State)
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Zip)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Zip)
+                </div>
+            </div>
+        </div>
+        <div class="row top-buffer">
+            <div class="col-md-4" style="margin-top:10px;">
+                
+            </div>
+            <div class="col-md-8" style="margin-top:10px;">
+                <input class="btn btn-success" onclick="location.href='@Url.Action("Edit", new { id = Model.UserID})';return false;" value="Edit User" />
+                <input class="btn btn-primary" onclick="location.href='@Url.Action("Index")';return false;" value="Back to list" />
+            </div>
+
+        </div>
+    </fieldset>
+
+
+
+</div>
